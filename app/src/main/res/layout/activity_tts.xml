@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+<TextView android:id="@+id/intro"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+    />
+    
+<EditText android:id="@+id/enter"
+android:layout_width="fill_parent"
+android:layout_height="0dp" />
+<Button android:id="@+id/speak"
+android:layout_width="match_parent"
+android:layout_height="186dp"
+android:text="Speak"
+    android:layout_weight="1.10"
+    android:background="#65e2bf" />
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ThirdEye!</string>
+    <string name="app_name">ThirdEye_Tessaract</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_text">Camera</string>
+    <string name="text_hint">OCRed Text will appear here</string>
+</resources>
