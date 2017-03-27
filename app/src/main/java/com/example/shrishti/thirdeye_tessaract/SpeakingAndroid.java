@@ -26,10 +26,10 @@ public class SpeakingAndroid extends Activity implements OnClickListener, OnInit
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tts);
+        setContentView(com.example.arun.thirdeye_tessaract.R.layout.activity_tts);
 
         //get a reference to the button element listed in the XML layout
-        Button speakButton = (Button)findViewById(R.id.speak);
+        Button speakButton = (Button)findViewById(com.example.arun.thirdeye_tessaract.R.id.speak);
         //listen for clicks
         speakButton.setOnClickListener(this);
         Intent intent = getIntent();
@@ -46,7 +46,7 @@ public class SpeakingAndroid extends Activity implements OnClickListener, OnInit
     public void onClick(View v) {
 
         //get the text entered
-        EditText enteredText = (EditText)findViewById(R.id.enter);
+        EditText enteredText = (EditText)findViewById(com.example.arun.thirdeye_tessaract.R.id.enter);
         //String words = enteredText.getText().toString();
         speakWords(words);
     }

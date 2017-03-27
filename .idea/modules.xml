@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/23.1.0.iml" filepath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/23.1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/tess-two/build/generated/source/buildConfig/androidTest/androidTest.iml" filepath="$PROJECT_DIR$/libraries/tess-two/build/generated/source/buildConfig/androidTest/androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/androidTest1.iml" filepath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/androidTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/src/androidTest/androidTest2.iml" filepath="$PROJECT_DIR$/app/src/androidTest/androidTest2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/buildConfig.iml" filepath="$PROJECT_DIR$/app/build/generated/source/buildConfig/buildConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/tess-two/build/generated/source/buildConfig/buildConfig1.iml" filepath="$PROJECT_DIR$/libraries/tess-two/build/generated/source/buildConfig/buildConfig1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/tess-two/jni/com_googlecode_tesseract_android/src/com_googlecode_tesseract_android.iml" filepath="$PROJECT_DIR$/libraries/tess-two/jni/com_googlecode_tesseract_android/src/com_googlecode_tesseract_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/debug.iml" filepath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/src/main/main.iml" filepath="$PROJECT_DIR$/app/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/generated/source/r/r.iml" filepath="$PROJECT_DIR$/app/build/generated/source/r/r.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/tess-two/tess-two.iml" filepath="$PROJECT_DIR$/libraries/tess-two/tess-two.iml" />
-      <module fileurl="file://$PROJECT_DIR$/thirdeye_tesseract.iml" filepath="$PROJECT_DIR$/thirdeye_tesseract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/src/test/test.iml" filepath="$PROJECT_DIR$/app/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/thirdeye_tesseract.libraries/tess-two/unspecified/unspecified.iml" filepath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/thirdeye_tesseract.libraries/tess-two/unspecified/unspecified.iml" />
     </modules>
   </component>
 </project>

@@ -5,7 +5,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Locale;
 
 
 import android.app.Activity;
@@ -25,16 +24,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
-import android.*;
-import android.widget.EditText;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.view.View;
-import android.speech.tts.TextToSpeech;
-import android.speech.tts.TextToSpeech.OnInitListener;
-import android.content.Intent;
 
 import android.graphics.Color;
 
@@ -63,7 +52,7 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.example.arun.thirdeye_tessaract.R.layout.activity_main);
         String[] paths = new String[] { DATA_PATH, DATA_PATH + "tessdata/" };
 
         for (String path : paths) {
@@ -109,13 +98,13 @@ public class MainActivity extends Activity {
             }
         }
 
-        _field = (EditText) findViewById(R.id.field);
-        _button = (Button) findViewById(R.id.button);
+        _field = (EditText) findViewById(com.example.arun.thirdeye_tessaract.R.id.field);
+        _button = (Button) findViewById(com.example.arun.thirdeye_tessaract.R.id.button);
         _button.setOnClickListener(new OCRClickHandler());
 
         _path = DATA_PATH + "/ocr.jpg";
 
-        Button speakButton = (Button)findViewById(R.id.speak);
+        Button speakButton = (Button)findViewById(com.example.arun.thirdeye_tessaract.R.id.speak);
         //speakButton.setOnClickListener(new SpeakHandler());
     }
 

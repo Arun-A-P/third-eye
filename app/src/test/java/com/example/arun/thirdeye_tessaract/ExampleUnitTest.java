@@ -1,4 +1,4 @@
-package com.example.shrishti.thirdeye_tessaract;
+package com.example.arun.thirdeye_tessaract;
 
 import org.junit.Test;
 
