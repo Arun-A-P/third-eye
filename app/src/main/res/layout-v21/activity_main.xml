@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text"
+        android:layout_weight="0.06"
+        android:background="#2cbeb9" />
+
+    <EditText
+        android:id="@+id/field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_hint"
+        android:layout_weight="0.61" />
+
+      <Button android:id="@+id/speak"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:text="Speak"
+          android:layout_gravity="center_horizontal"
+          android:layout_weight="0.07"
+          android:backgroundTint="#2cbeb9"
+          android:onClick="goToSpeak"/>
+
+</LinearLayout>

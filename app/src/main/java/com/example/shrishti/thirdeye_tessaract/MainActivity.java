@@ -36,6 +36,8 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
 import android.content.Intent;
 
+import android.graphics.Color;
+
 import com.googlecode.tesseract.android.TessBaseAPI;
 
 public class MainActivity extends Activity {
@@ -69,6 +71,7 @@ public class MainActivity extends Activity {
             if (!dir.exists()) {
                 if (!dir.mkdirs()) {
                     Log.v(TAG, "ERROR: Creation of directory " + path + " on sdcard failed");
+
                     return;
                 }
 
@@ -216,6 +219,52 @@ public class MainActivity extends Activity {
         }
     }
 
+    public static Bitmap createBinaryImage( Bitmap source )
+    {
+        int width = source.getWidth();
+        int height = source.getHeight();
+        int pixel, A,B,R,G;
+
+        Bitmap bmOut = Bitmap.createBitmap(width, height, source.getConfig());
+
+        for(int x = 0; x < width; ++x) {
+            for(int y = 0; y < height; ++y) {
+                // get one pixel color
+                pixel = source.getPixel(x, y);
+                // retrieve color of all channels
+                A = Color.alpha(pixel);
+                R = Color.red(pixel);
+                G = Color.green(pixel);
+                B = Color.blue(pixel);
+                // take conversion up to one single value
+                R = G = B = (int)(0.299 * R + 0.587 * G + 0.114 * B);
+                // set new pixel color to output bitmap
+                bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+            }
+        }
+       String path = Environment.getExternalStorageDirectory() + "/myImages/";
+        File filename=new File(path,"test.jpg");
+        FileOutputStream out = null;
+        try {
+            out = new FileOutputStream(filename);
+            bmOut.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
+            // PNG is a lossless format, the compression factor (100) is ignored
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        return bmOut;
+
+    }
     protected void onPhotoTaken() {
         _taken = true;
 
@@ -262,14 +311,15 @@ public class MainActivity extends Activity {
                 bitmap = Bitmap.createBitmap(bitmap, 0, 0, w, h, mtx, false);
             }
 
-            // Convert to ARGB_8888, required by tess
-            bitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+
 
         } catch (IOException e) {
             Log.e(TAG, "Couldn't correct orientation: " + e.toString());
         }
 
-        // _image.setImageBitmap( bitmap );
+        bitmap=(Bitmap) createBinaryImage(bitmap);
+        // Convert to ARGB_8888, required by tess
+        bitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
 
         Log.v(TAG, "Before baseApi");
 
@@ -277,7 +327,6 @@ public class MainActivity extends Activity {
         baseApi.setDebug(true);
         baseApi.init(DATA_PATH, lang);
         baseApi.setImage(bitmap);
-
         recognizedText = baseApi.getUTF8Text();
 
         baseApi.end();
@@ -295,10 +344,11 @@ public class MainActivity extends Activity {
         recognizedText = recognizedText.trim();
 
         if ( recognizedText.length() != 0 ) {
-            _field.setText(_field.getText().toString().length() == 0 ? recognizedText : _field.getText() + " " + recognizedText);
+           // _field.setText(_field.getText().toString().length() == 0 ? recognizedText : _field.getText() + " " + recognizedText);
+            _field.setText( recognizedText);
             _field.setSelection(_field.getText().toString().length());
         }
-        // Cycle done.
+
     }
 }
 

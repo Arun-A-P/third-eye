@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ThirdEye_Tessaract.iml" filepath="$PROJECT_DIR$/ThirdEye_Tessaract.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/tess-two/tess-two.iml" filepath="$PROJECT_DIR$/libraries/tess-two/tess-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thirdeye_tesseract.iml" filepath="$PROJECT_DIR$/thirdeye_tesseract.iml" />
     </modules>
   </component>
 </project>
